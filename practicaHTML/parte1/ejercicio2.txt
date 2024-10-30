@@ -1,0 +1,52 @@
+HTML está compuesto por un conjunto de elementos que son la base de su estructura. Los elementos están compuestos por dos tags (el de apertura y el de cierre) y el contenido
+en el medio (con excepción de los elementos vacíos ). Cada tag puede tener atributos (proporcionan ciertas características como altura, ancho, color, etc.) y eventos (asocian un script que se ejecuta cuando el evento ocurre).
+
+Analizar los siguientes segmentos de código indicando en qué sección del documento HTML se colocan, cuál es el efecto que producen y señalar cada uno de los elementos, etiquetas, y atributos (nombre y valor), aclarando si es obligatorio.
+
+2.a)
+<!-- Código controlado el día 12/08/2009 →
+Un comentario. Se puede colocar en cualquier parte del codigo. 
+2.b)
+<div id="bloque1">Contenido del bloque1</div>
+Siguiendo con la teoría, header, nav, div, footer 
+Esto indica que el div tiene un id de bloque 1, y que dentro de div se pone “contenido del bloque 1”. 
+2.c)
+<img src="" alt="lugar imagen" id="im1" name="im1" width="32" height="32" longdesc="detalles.htm" />
+Es una imagen, con lenguaje alternativo “lugar”,con nombre e id, ha sido modificada con width 32 height 32 y ademas aparece una longdescripcion que dice detalles.html.
+2.d)
+<meta name="keywords" lang="es" content="casa, compra, venta, alquiler " />
+<meta http-equiv="expires" content="16-Sep-2019 7:49 PM" />
+Esta previo al head del documento html (no confundirse con header) .
+Añade información sobre la página para motores de búsqueda y control de cache.
+La primera etiqueta define palabras clave en español, que pueden ser usadas por los motores de búsqueda para clasificar el contenido.
+La segunda etiqueta establece una fecha de expiración del contenido para el almacenamiento en caché.
+ 
+2.e)
+<a href="http://www.e-style.com.ar/resumen.html" type="text/html" hreflang="es" charset="utf-8" rel="help">Resumen HTML </a>
+Debe colocarse en el cuerpo (<body>), ya que es un enlace visible para el usuario.
+Crea un enlace que lleva a la URL especificada. El texto del enlace es "Resumen HTML". El enlace está marcado como un recurso de ayuda, en español, con tipo text/html y codificación utf-8.
+2.f)
+<table width="200" summary="Datos correspondientes al ejercicio vencido">
+<caption align="top"> Título </caption>
+<tr>
+<th scope="col">&nbsp;</th>
+<th scope="col">A</th>
+<th scope="col">B</th>
+<th scope="col">C</th>
+</tr>
+<tr>
+<th scope="row">1º</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th scope="row">2º</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+
+Debe colocarse en el cuerpo (<body>) del documento.
+Crea una tabla con un resumen que indica los datos correspondientes a un ejercicio vencido, un título de cabecera, y filas/columnas vacías con marcas de espacio 

@@ -1,0 +1,14 @@
+2.A) ¿Qué formatos soporta ?
+2.B )Crear un elemento audio
+Ejemplo de src: https://html5tutorial.info/media/vincent.mp3
+
+2a. 
+HTML5 soporta varios formatos de audio y video de manera nativa. Sin embargo, no todos los navegadores soportan los mismos formatos, por lo que es común incluir múltiples fuentes en los elementos <audio> y <video> para garantizar la compatibilidad.
+Entre los formatos que soporta se encuentran : MP3, Ogg Vorbis, WAV
+
+3.A) ¿Qué formatos soporta ?
+3.B) Crear un elemento video
+Ejemplo de src: https://www.w3schools.com/html/mov_bbb.mp4/ogg
+
+3.a) de VIDEO para 3.a) MP4, WebM, Ogg Theora
+3.B) resuelto antes

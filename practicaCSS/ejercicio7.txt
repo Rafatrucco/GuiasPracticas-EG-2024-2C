@@ -1,0 +1,39 @@
+Completar el juego para practicar sobre selectores 
+http://flukeout.github.io/
+
+* / en realidad ‘plate’
+bento
+#fancy
+plate apple
+#fancy pickle 
+.small
+orange.small
+bento orange.small
+plate , bento
+*
+plate * (agarro todo contenido que tenga un plato)
+ plate + apple
+bento ~ pickle
+plate > apple
+plate orange:first-child
+plate *:only-child (agarro todo contenido que tenga un plato, pero el primero) 
+.small:last-child
+ plate:nth-child(3)
+bento:nth-last-child(3) (se basa en la posicion) de atras para adelante.
+Apple:first-of-type
+plate:nth-of-type(even) (( all even or odd) 
+plate:nth-of-type(2n+3) (( selecciona el 3er plato y luego 2+)
+plate apple:only-of-type (( Selects the only element of its type within another element.
+.small:last-of-type (selecciona los ultimos tipos de una clase, ejemplo la ult manza y naranja)
+Bento:empty
+apple:not(.small) (seleccionar las manzanas que no tienen atributos)
+*for	 	(selecciona todo lo que tenga atributos for)
+plate[for]	(selecciona platos que tenga atributos)
+bento[for="Vitaly"] ( case sensitive en este juego) 
+*[for="Vitaly"]
+[for=”Vitaly”]
+
+[for^="Sa"]		(selecciona los que EMPIEZAN con ‘SA’ )
+[for$="ato"]		(selecciona los que TERMINAN con ‘ATO’ )
+[for*="obb"]		(selecciona los que CONTENGAN ‘OBB’ es como un “like”)
+

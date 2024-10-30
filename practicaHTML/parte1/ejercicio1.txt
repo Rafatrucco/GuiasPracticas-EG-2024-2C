@@ -1,0 +1,44 @@
+1. Qué es HTML, cuando fue creado, cuáles fueron las distintas versiones y cuál es la última?
+2. ¿Cuáles son los principios básicos que el W3C recomienda seguir para la creación de documentos con HTML?
+3. En las Especificaciones de HTML, ¿cuándo un elemento o atributo se considera desaprobado? ¿y obsoleto?
+4. Qué es el DTD y cuáles son los posibles DTDs contemplados en la especificación de HTML 4.01?
+5. Qué son los metadatos y cómo se especifican en HTML?
+
+1- 
+HTML (HyperText Markup Language) es el lenguaje estándar utilizado para crear páginas web. Se utiliza para estructurar y presentar contenido en la web a través de etiquetas y elementos que indican la jerarquía y el tipo de información.
+
+HTML fue desarrollado por Tim Berners-Lee en 1991 mientras trabajaba en CERN, como una manera de compartir información entre científicos a través de la web.
+
+Versiones principales:
+HTML 1.0 (1993): La primera versión pública del lenguaje.
+HTML 2.0 (1995): Estableció un estándar más amplio.
+HTML 3.2 (1997): Introdujo soporte para tablas, scripts y otros elementos visuales.
+HTML 4.01 (1999): Mejoró el soporte para hojas de estilo (CSS) y promovió una mejor separación entre estructura y presentación.
+XHTML 1.0 (2000): Una versión más estricta de HTML compatible con XML.
+HTML5 (2014): La versión más reciente, que introduce nuevos elementos para multimedia, gráficos y APIs que mejoran la funcionalidad de las aplicaciones web.
+Última versión: HTML5.3 (en desarrollo), pero HTML5 es la versión más ampliamente adoptada.
+
+2- 
+El W3C (World Wide Web Consortium) establece los siguientes principios básicos para la creación de documentos en HTML:
+Semántica: Utilizar etiquetas que describan el significado del contenido, como <header>, <footer>, <article>, para mejorar la accesibilidad y SEO.
+Accesibilidad: Asegurar que los sitios web sean accesibles para personas con discapacidades, incluyendo el uso adecuado de elementos como <alt> para imágenes.
+Separación de estructura y presentación: Utilizar HTML para la estructura del documento y CSS para la presentación visual, promoviendo una clara distinción entre ambos.
+Compatibilidad con estándares: Seguir las recomendaciones y especificaciones del W3C para asegurar la compatibilidad en diferentes navegadores y dispositivos.
+Interoperabilidad: Asegurarse de que los sitios funcionen correctamente en diversos dispositivos, navegadores y resoluciones.
+3- 
+Desaprobado (deprecated): Un elemento o atributo se considera "desaprobado" cuando todavía es parte del estándar, pero su uso ya no es recomendado, ya que hay alternativas mejores o más modernas disponibles. Aún puede ser soportado por los navegadores, pero se espera que sea eliminado en versiones futuras.
+Ejemplo: La etiqueta <font> fue desaprobada en favor del uso de CSS para el estilo del texto.
+Obsoleto (obsolete): Un elemento o atributo se considera "obsoleto" cuando ya no forma parte de la especificación y se espera que los navegadores dejen de soportarlo en algún momento. No se debe utilizar y su funcionalidad ya ha sido eliminada de la especificación.
+Ejemplo: La etiqueta <blink> fue obsoleta y eliminada de la especificación de HTML.
+
+4-
+DTD (Document Type Definition) es un conjunto de reglas que define qué elementos y atributos pueden utilizarse en un documento HTML, y cómo deben estructurarse. El DTD se especifica en la cabecera del documento para que el navegador sepa cómo interpretar el código.
+En HTML 4.01, existen tres tipos de DTD:
+HTML 4.01 Strict: Se utiliza cuando se desea un código limpio, enfocado en la separación entre estructura y presentación. No permite el uso de elementos y atributos obsoletos o presentacionales.
+HTML 4.01 Transitional: Permite el uso de elementos y atributos que han sido desaprobados (deprecated), para facilitar la transición desde versiones anteriores.
+HTML 4.01 Frameset: Se utiliza cuando el documento contiene marcos (frames), una técnica obsoleta de diseño que permite dividir la pantalla en varias secciones independientes.
+
+
+5- 
+Los metadatos son datos que describen información sobre el documento, como el autor, las palabras clave, la descripción, el conjunto de caracteres utilizado, entre otros. Los metadatos no se muestran directamente en la página, pero son importantes para los motores de búsqueda, redes sociales, y los navegadores.
+En HTML, los metadatos se especifican dentro de la etiqueta <head>, generalmente mediante la etiqueta <meta>. Ayudan a definir cómo los motores de búsqueda interpretan el contenido de la página y cómo los navegadores lo renderizan.

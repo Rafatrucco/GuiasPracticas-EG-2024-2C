@@ -1,0 +1,43 @@
+En cada caso, indicar las salidas correspondientes:
+
+
+<?php
+$matriz = array("x" => "bar", 12 => true); 
+echo $matriz["x"];
+echo $matriz[12]; 
+?>
+
+La salida será , imprime variable x > “bar”
+		 Imprime variable 12 > true.
+
+
+
+<?php
+ $matriz = array("unamatriz" => array(6 => 5, 13 => 9, "a" => 42)); 
+echo $matriz["unamatriz"][6];
+ echo $matriz["unamatriz"][13]; 
+echo $matriz["unamatriz"]["a"];
+ ?>
+
+Se define un array $matriz que contiene un elemento "unamatriz" que, a su vez, es un array asociativo.
+Se imprime 6 , 13 y ‘a’  del arreglo “unamatriz”
+Se imprime 5 9 42
+
+
+
+
+<?php 
+$matriz = array(5 => 1, 12 => 2);}
+$matriz[] = 56;
+$matriz["x"] = 42; 
+unset($matriz[5]); 
+unset($matriz);
+?>
+
+La variable $matriz es un array con 5 y 12. 
+Luego se le asigna 56 con valor indice 0.
+Luego se le asigna ‘x’ con valor 42
+
+Por ultimo se desvaloriza 5 y matriz. 
+Por lo tanto la variable $matriz queda vacia. 
+(( no hay salida )) 

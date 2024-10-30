@@ -1,0 +1,51 @@
+Analizar el siguiente código señalando declaraciones y aplicaciones de reglas, y su efecto.
+
+p#normal {
+font-family: arial,helvetica;
+font-size: 11px;
+font-weight: bold;
+}
+
+*#destacado {
+border-style: solid;
+border-color: blue;
+border-width: 2px;
+}
+
+#distinto {
+background-color: #9EC7EB;
+color: red;
+}
+
+<p id="normal">Este es un párrafo</p>
+
+<p id="destacado">Este es otro párrafo</p>
+
+<table id="destacado"><tr><td>Esta es una tabla</td></tr></table>
+
+<p id="distinto">Este es el último párrafo</p>
+
+Los estilos son: 
+Todo parrafo p que tenga etiqueta ID #normal, va a estar estiliazdo con: 
+font-family: arial,helvetica;
+font-size: 11px;
+font-weight: bold;
+Por el ‘*’ , todo lo que tenga etiqueta ID #destacado, va a estar estilizado con: 
+border-style: solid;
+border-color: blue;
+border-width: 2px;
+Todo lo que tenga ID #distinto, va a estar estilizado con: 
+background-color: #9EC7EB;
+color: red;
+
+Por lo tanto, 
+La primer linea, “Este es un parrafo” con ID=”normal” tendrá los estilos aplicados: arial helvetica, 11px negrita. Selector:  p#normal. 
+
+La segunda linea, “este es otro parrafo” con ID=”destacado” tendrá los estilos aplicados de #destacado: borde con grosor de 2px azul.Selector:*#destacado 
+Mas alla de ‘p’ o ‘*’, por orden este aparece mas tarde y afecta a <p> también.
+
+La tercer linea, con ID=”destacado” será una tabla que tendrá los estilos aplicados borde con grosor de 2px azul. Selector:*#destacado
+
+La cuarta linea, con ID=”distinto”, su selector: #distinto, por ser la ultima en el CSS, se tendrá los estilos aplicados de fuente roja y bg-color : #9EC7EB;
+
+Como podemos observar, si bien la primer linea de CSS afecta especificamente a <p>, ademas de aparecer mas tarde, son mas especificas ya que utilizan la ID asignada la linea de HTML

@@ -1,0 +1,56 @@
+Dadas las siguientes declaraciones:
+
+* {color:green; }
+
+a:link {color:gray }
+
+a:visited{color:blue }
+
+a:hover {color:fuchsia }
+
+a:active {color:red }
+
+p {font-family: arial,helvetica;font-size: 10px;color:black; }
+
+.contenido{font-size: 14px;font-weight: bold; }
+
+
+Analizar los siguientes códigos y comparar sus efectos. Explicar:
+
+<body>
+<p class="contenido" style="font-weight: normal;">
+Este es un texto ...............</p>
+<table>
+<tr>
+<td>Y esta es una tabla.......</td>
+</tr>
+<tr>
+<td><a href="http://www.google.com.ar">con un enlace</a></td>
+</tr>
+</table>
+</body>
+----------------------------------------------------------------------------------------------------------------
+
+<body class="contenido">
+<p> Este es un texto................</p>
+<table>
+<tr>
+<td>Y esta es una tabla.......</td>
+</tr>
+<tr>
+<td><a href="http://www.google.com.ar">con un enlace</a></td>
+</tr>
+</table>
+</body>
+
+
+La Diferencia principal es que body tiene una class=”contenido” , esta modifica la apariencia de la fuente, gracias a el selector de CSS ‘.contenido’ , el tamaño se vera en un tamaño de 14px y en negrita (font-size: 14px; font-weight: bold;) 
+
+Luego, por especificacion en  el segundo codigo si bien existe la clase “contenido” en <p>, en la hoja de estilos tiene mayor peso como esta asignado p que se verá en helvetica con 10px y color negro, ademas de weight normal) ((pues se aplica ultimo por orden))(font-family: arial,helvetica;font-size: 10px;color:black;)
+
+Luego en el primer codigo, el color del texto en la tabla es de color verde, ya que contenido afecta a <p>, mientras que en el segundo codigo, .contenido afecta a todos. 
+La tabla al no poseer reglas de CSS, La regla * { color: green; } afectaría a cualquier elemento que no tenga un color definido por otro selector más específico.
+Ya que .contenido (selector por clase) > * (selector universal). 
+
+Por ultimo, el enlace se comporta igual, hover significa que cuando pasamos el raton por sobre el enlace, esté se hará de un color rosa. 
+Si ya hemos visitado la pagina, el enlace estará de color azul

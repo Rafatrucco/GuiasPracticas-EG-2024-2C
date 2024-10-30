@@ -1,0 +1,397 @@
+En cada caso, explicar las diferencias entre los segmentos de código y sus visualizaciones:
+
+3.a)
+<a href="http://www.google.com.ar">Click aquí para ir a Google</a>
+<a href="http://www.google.com.ar" target="_blank">Click aquí para ir a Google</a>
+<a href="http://www. google.com.ar" type="text/html" hreflang="es" charset="utf-8" rel="help">
+<a href="#">Click aquí para ir a Google</a>
+<a href="#arriba">Click aquí para volver arriba</a>
+<a name="arriba" id="arriba"></a>
+
+1. te redirige a google.com.ar luego de clickear en ella. 
+2. te redirige a google.com.ar luego de clickear, PERO esta vez te lo abre en una nueva pestaña gracias a “target=”_blank” 
+3. No tiene cierre, es decir no tiene link donde dirigirse. Ademas:
+type="text/html": Indica que el recurso al que apunta el enlace es un documento HTML.
+hreflang="es": Informa que el recurso enlazado está en idioma español.
+charset="utf-8": Especifica la codificación de caracteres del recurso enlazado.
+rel="help": Define una relación de ayuda entre el documento actual y el recurso enlazado.
+Cuando yo completo la linea, me devuelve un  www.%20google.com.ar.
+4.  Igual que los primeros enlaces en apariencia, pero al hacer clic no redirige a Google ni a ninguna otra página. Solo se recarga o se mueve al tope del documento si no se especifica otro ancla.
+4 y 5 Es un anker que cuando tocas,  te dirige hacia “#”  mientras que el siguiente te cambia a “#arriba”.
+6. Igual que el 3°Falta texto, no hay contenido dentro del enlace. Sirve para navegacion interna de documento.
+
+3.b)
+<p><img src="im1.jpg" alt="imagen1" /><a href="http://www.google.com.ar">Click aquí</a></p>
+
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> Click aquí</p>
+
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" />Click aquí</a></p>
+
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> <a href="http://www.google.com.ar">Click aquí</a></p>
+
+1. La imagen y el texto del enlace son elementos separados. Solo el texto es clicable.
+2. Solo la imagen es clicable(te redirige a google.com.ar) , y el texto "Click aquí" es un texto sin enlace.
+3.Tanto la imagen como el texto "Click aquí" forman parte del mismo enlace, todo es clicable. 
+4.Imagen y texto son clicables, pero cada uno tiene su propio enlace independiente. (Ambos a google.com.ar) 
+
+La diferencia entre 2 y 3, es que el anker cierra antes y en el otro el anker cierra despues. 
+
+
+
+
+
+3.c)
+<ul>
+<li>xxx</li>
+<li>yyy</li>
+<li>zzz</li>
+</ul>
+—--------------------
+<ol>
+<li>xxx</li>
+<li>yyy</li>
+<li>zzz</li>
+</ol>
+
+—------------------
+<ol>
+<li>xxx</li>
+</ol>
+<ol>
+<li value="2">yyy</li>
+</ol>
+<ol>
+<li
+value="3">zzz</li>
+</ol>
+—----------------------
+<blockquote>
+<p>1. xxx<br />
+2. yyy<br />
+3. zzz</p>
+</blockquote>
+
+
+
+UL lista NO ORDENADA.
+OL: lista ORDENADA
+Luego LI define cada elemento de cada lista.
+
+Un  bloque de cita (<blockquote>), se utiliza normalmente para resaltar una sección de texto citado. Dentro de este bloque hay un párrafo (<p>) que contiene los elementos de la lista como texto, separados por etiquetas de salto de línea (<br />).
+Efecto: El contenido se verá como un bloque de texto citado con numeración manual, pero no es una lista propiamente dicha, sino un párrafo con texto numerado manualmente.
+
+
+
+3.d)
+<table border="1" width="300">
+<tr>
+<th>Columna 1</th>
+<th>Columna 2</th>
+</tr>
+<tr>
+<td>Celda 1</td>
+<td>Celda 2</td>
+</tr>
+<tr>
+<td>Celda 3</td>
+<td>Celda 4</td>
+</tr>
+</table>
+—--------------------
+<table border="1" width="300">
+<tr>
+<td><div align="center"><strong>Colum
+na1</strong></div></td>
+<td><div align="center"><strong>Columna 2</strong></div></td>
+</tr>
+<tr>
+<td>Celda 1</td>
+<td>Celda 2</td>
+</tr>
+<tr>
+<td>Celda 3</td>
+<td>Celda 4</td>
+</tr>
+</table>
+
+
+Ambas tablas tienen el atributo border="1" que agrega un borde, y width="300" define el ancho de la tabla.
+
+Por un lado, la primera utiliza TH (tabla header) la cual el contenido lo centra y lo pone en negrita. 
+Por el otro, para darle este “estilo”, utiliza dentro de un div, los modificadores de texto :”align center” y “strong” para centrarla y darle negrita. Utilizando td (tabla de dato)
+
+El primer código es más semánticamente correcto al usar <th> para los encabezados de la tabla.
+
+
+3.e)
+<table width="200">
+<caption>
+Título
+</caption>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">
+&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table>
+
+—------------------------
+<table width="200">
+<tr>
+<td colspan="3"><div align="center">Título</div></td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table>
+
+1. El carácter &nbsp; se usa dentro de las celdas para mantenerlas visibles, ya que crea un espacio en blanco.
+
+El título "Título" aparece centrado por defecto sobre la tabla gracias a la etiqueta <caption>, que coloca el título fuera de la estructura de las celdas.
+
+2.  Este código también genera una tabla de 200 píxeles de ancho, pero no utiliza <caption>. En su lugar, el título se coloca dentro de una celda en la primera fila (<td>).
+La celda que contiene el título se extiende a lo largo de las tres columnas gracias al atributo colspan="3", y su contenido está centrado mediante <div align="center">.
+
+El uso de <caption> en el primer código hace que la tabla sea más accesible para lectores de pantalla, ya que identifica claramente que "Título" es el título de la tabla.
+En el segundo código, aunque el título es visualmente similar, no es semánticamente un título de tabla, lo que puede dificultar la accesibilidad.
+
+
+
+
+
+
+
+3.f)
+<table width="200">
+<tr>
+<td colspan="3"><div align="center">Título</div></td>
+</tr>
+<tr>
+<td rowspan="2" bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table>
+—---------------------------------
+<table width="200">
+<tr>
+<td colspan="3"><div
+align="center">Título</div></td>
+</tr>
+<tr>
+<td colspan="2"
+bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table>
+
+3.g)
+<table width="200" border="1">
+<tr>
+<td colspan="3"><div
+align="center">Título</div></td>
+</tr>
+<tr>
+<td colspan="2"rowspan="2">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td width="50%">&nbsp;</td>
+</tr>
+</table>
+
+—---------------------------
+<table width="200" border="1" cellpadding="0" cellspacing="0">
+<tr>
+<td colspan="2"><div align="center">Título</div></td>
+</tr>
+<tr>
+<td rowspan="2">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td width="50%">&nbsp;</td>
+</tr>
+</table>
+
+Diferencias, una utiliza ROWSPAN la otra COLSPAN. 
+El primer código crea una estructura en la que la primera columna de la segunda y tercera fila está fusionada verticalmente, resultando en una tabla menos regular.
+El segundo código presenta una tabla con una estructura más balanceada, donde las celdas están alineadas horizontalmente en filas, sin celdas que abarquen más de una fila verticalmente.
+
+
+
+3.h) 
+<form id="form1" name="form1" action="procesar.php" method="post" target="_blank">
+<fieldset>
+<legend>LOGIN</legend>
+Usuario: <input type="text" id="usu1" name="usu1" value="xxx" /><br />
+Clave: <input type="password" id="clave1" name="clave1" value="xxx" />
+</fieldset>
+<input type="submit" id="boton1" name="boton1" value="Enviar" />
+</form>
+1-Primer form:
+Este formulario envía la información introducida por el usuario a procesar.php para su procesamiento en el servidor, abriendo el resultado en una nueva ventana. La información sensible (contraseña) se envía de manera oculta mediante POST.
+
+action="procesar.php": Al enviar el formulario, los datos se envían al archivo procesar.php para ser procesados.
+method="post": Los datos se envían mediante el método POST, que oculta los parámetros en la URL.
+target="_blank": El resultado se abrirá en una nueva ventana o pestaña.
+Campo de texto: El campo usu1 tiene un valor por defecto de "xxx".
+Campo de contraseña: El campo clave1 también tiene un valor por defecto de "xxx".
+Botón de envío: Al hacer clic en "Enviar", se envían los datos.
+—------------------------------------
+<form id="form2" name="form2" action="" method="get" target="_blank">
+LOGIN<br />
+<label>Usuario: <input type="text" id="usu2" name="usu2" /></label><br />
+<label>Clave: <input type="text" id="clave2" name="clave2" /></label><br />
+<input type="submit" id="boton2" name="boton2" value="Enviar" />
+</form>
+2-Segundo form: 
+action="": Al no tener una ruta definida en el atributo action, el formulario envía los datos a la misma página en la que está el formulario.
+method="get": El método GET envía los datos como parte de la URL, lo que hace que las credenciales se muestren en la barra de direcciones.
+target="_blank": El resultado se abrirá en una nueva pestaña o ventana.
+Este formulario utiliza el método GET, que incluye los datos en la URL (poco seguro para credenciales). No tiene una ruta de action definida, por lo que se enviaría a la misma página, abriendo una nueva pestaña.
+
+
+—-----------------------------
+<form id="form3" name="form3" action="mailto:xx@xx.com” enctype=text/plain method="post" target="_blank">
+<fieldset>
+<legend>LOGIN</legend>
+Usuario: <input type="text" id="usu3" name="usu3" /><br />
+Clave: <input type="password" id="clave3" name="clave3" />
+</fieldset>
+<input type="reset" id="boton3" name="boton3" value=
+"Enviar" />
+</form>
+action="mailto:xx@xx.com": Al enviar el formulario, los datos se enviarán por correo electrónico a xx@xx.com.
+enctype="text/plain": Especifica que los datos se enviarán como texto plano.
+method="post": Los datos se envían usando POST.
+target="_blank": Los datos se procesarán en una nueva ventana o pestaña.
+Botón de reinicio (reset): En lugar de enviar el formulario, este botón reinicia los campos a sus valores predeterminados.
+
+
+
+
+
+Método de envío (method):
+Destino de los datos (action):
+Campo de contraseña:
+Botón de envío:
+
+1er formulario
+Método de envío (method): POST, datos no se muestren en la URL.
+Destino de los datos (action): procesar.php
+Campo de contraseña: Type: password
+Botón de envío: type="submit".
+
+2do formulario
+Método de envío (method): GET, que es menos seguro porque expone los datos en la URL
+Destino de los datos (action): no tiene un destino específico, se envian a la misma pagina
+Campo de contraseña: Texto simple
+Botón de envío:type="submit".
+
+3er formulario
+
+Método de envío (method): POST, datos no se muestren en la URL.
+Destino de los datos (action): Correo electronico: action="mailto:xx@xx.com"
+Campo de contraseña: Type: Password
+Botón de envío: reset
+
+
+
+
+El primer formulario es el más completo y funcional, enviando los datos de manera segura usando POST y con la capacidad de procesarlos en un archivo PHP.
+
+El segundo formulario no es seguro, ya que utiliza GET y expone las credenciales en la URL.
+
+El tercer formulario tiene un error en el botón de envío y su enfoque de enviar los datos por correo electrónico en texto plano no es recomendable para manejar credenciales.
+
+3.i) 
+<label>Botón 1
+<button type="button" name="boton1" id="boton1">
+<img src="logo.jpg" alt="Botón con imagen " width="30" height="20" /><br />
+<b>CLICK AQUÍ</b></button></label>
+
+—-------------------
+<label>Botón 2
+<input type="button" name="boton2" id="boton2" value="CLICK AQUÍ" />
+</label>
+
+El primer botón es más versátil y atractivo visualmente, gracias a la inclusión de una imagen y texto formateado, lo que mejora la experiencia del usuario. Utiliza el elemento <button>, que permite incluir contenido HTML adicional (como una imagen y texto en negrita)
+
+El segundo botón es más simple y directo, ideal para situaciones donde se necesita un botón sin elementos gráficos adicionales. Sin embargo, es menos llamativo que el primero.
+Ademas, este ultimo utiliza un elemento <input> que es más limitado, mostrando solo el texto definido en el atributo value.
+
+
+
+3.j)
+ <p><label><input type="radio" name="opcion" id="X" value="X" />X</label><br />
+<label><input type="radio" name="opcion" id="Y" value="Y" />Y</label></p>
+—-----------------------------
+<p><label><input type="radio" name="opcion1" id="X" value="X" />X</label><br />
+<label><input type="radio" name="opcion2" id="Y" value="Y" />Y</label></p>
+Si ambos tienen name opcion, entonces solo podes marcar 1 opcion, en cambio si ambos tienen nombres diferentes, pues pueden elegirse ambos al mismo tiempo
+
+El primer segmento es útil cuando se necesita que el usuario elija solo una opción entre varias dentro de un mismo contexto (por ejemplo, selección de preferencia).
+El segundo segmento permite una mayor flexibilidad, ya que permite al usuario seleccionar opciones de diferentes grupos, lo que podría ser útil en formularios más complejos donde se requiera que el usuario elija múltiples preferencias de diferentes categorías.
+
+
+3.k)
+<select name="lista">
+<optgroup label="Caso 1">
+<option>Mayo</option>
+<option>Junio</option>
+</optgroup>
+<optgroup label="Caso 2">
+<option>Mayo</option>
+<option>Junio</option>
+</optgroup>
+</select>
+
+<select name="lista">: Crea un menú desplegable (lista) en el formulario. El atributo name especifica el nombre que se usará al enviar el formulario.
+
+<optgroup>: Agrupa opciones relacionadas dentro del menú desplegable. Se utiliza el atributo label para definir el título del grupo de opciones.
+Grupo "Caso 1": Contiene las opciones "Mayo" y "Junio".
+Grupo "Caso 2": También contiene las mismas opciones "Mayo" y "Junio".
+<option>: Define cada opción dentro del grupo.
+Este menú desplegable permite seleccionar una sola opción de las disponibles. Cuando el usuario selecciona una opción y envía el formulario, solo se enviará el valor de la opción seleccionada.
+
+—------------------------
+<select name="lista[]" multiple="multiple">
+<optgroup label=" Caso 1">
+<option>Mayo</option>
+<option>Junio</option>
+</optgroup>
+<optgroup label=" Caso 2">
+<option>Mayo</option>
+<option>Junio</option>
+</optgroup>
+</select>
+
+<select name="lista[]" multiple="multiple">: Similar al primero, pero el atributo multiple permite seleccionar múltiples opciones. El uso de name="lista[]" indica que se enviarán todos los valores seleccionados como un array.
+
+<optgroup> y <option>: Igual que en el primer segmento, se utilizan para agrupar las opciones en dos categorías.
+
+El primer segmento es adecuado para casos donde se necesita que el usuario elija una sola opción de un grupo de opciones.
+El segundo segmento es más flexible y permite al usuario seleccionar múltiples opciones, lo que es útil en formularios que requieren múltiples respuestas o elecciones, como en encuestas o selecciones de intereses.

@@ -1,0 +1,30 @@
+<!-- 
+4.E) Crear un formulario con un campo de tipo number y validar que funcione. Además configurar valores mínimos y máximos permitidos.
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ <body>
+
+    <form action="procesar.php" method="post">
+        <h1>Formulario con Numero y Validacion</h1>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+    
+    
+        <label for="cantidad">Elija un numero entre 1 y 100:</label>
+        <input type="number" name="cantidad" id="cantidad" min="1" max="100" required><br><br>
+    
+    
+        <!-- <input type="reset" value="Enviar"> -->
+        <button type="submit">Enviar</button>
+     </form>
+    
+
+</body>
+ </html>

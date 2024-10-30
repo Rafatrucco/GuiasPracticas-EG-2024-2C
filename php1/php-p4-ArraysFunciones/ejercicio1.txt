@@ -1,0 +1,36 @@
+Indicar si los siguientes códigos son equivalentes:
+
+
+
+<?php 
+$a = array( 'color' => 'rojo', 'sabor' => 'dulce', 'forma' => 'redonda', 'nombre' => 'manzana', 4
+);
+?>
+
+------------------------------------------------------------------------------------------------
+
+<?php
+ $a['color'] = 'rojo'; 
+$a['sabor'] = 'dulce'; 
+$a['forma'] = 'redonda';
+ $a['nombre'] = 'manzana'; 
+$a[] = 4;
+?>
+
+Se crea un array $a 
+AMBOS codigos son equivalentes, con la diferencia de que uno esta asignando los datos en una sola linea, mientras que el otro asigna uno por uno.
+
+El último elemento 4 es un valor numérico sin clave, que se convierte en un índice numérico automáticamente. Así que el array resultante es:
+[color] => rojo 
+[sabor] => dulce
+ [forma] => redonda
+ [nombre] => manzana 
+[0] => 4
+
+La línea $a[] = 4; añade el valor 4 al final del array sin especificar una clave, lo que resulta en un índice numérico automático. Así que el array final también es:
+[color] => rojo 
+[sabor] => dulce
+ [forma] => redonda
+ [nombre] => manzana 
+[0] => 4
+

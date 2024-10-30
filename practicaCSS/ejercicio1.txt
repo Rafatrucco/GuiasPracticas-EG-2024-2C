@@ -1,0 +1,99 @@
+Responder: 
+ ¿ Qué es CSS y para qué se usa?
+ CSS utiliza reglas para las declaraciones de estilo, ¿cómo funcionan?
+ ¿ Cuáles son las tres formas de dar estilo a un documento?
+ ¿ Cuáles son los distintos tipos de selectores más utilizados?
+Ejemplifique cada uno.
+ ¿ Qué es una pseudo-clase? Cuáles son las más utilizadas aplicadas a vínculos?
+ ¿ Qué es la herencia?
+ ¿ En qué consiste el proceso denominado cascada?
+
+
+
+Qué es CSS y para qué se usa?
+CSS (cascade style sheet) es un lenguaje utilizado para describir la presentación visual de un documento HTML. 
+Permite separar el contenido (HTML) del diseño visual.
+Se usa para controlar el diseño, colores, tipografía, márgenes, espaciados, posición de los elementos, y mucho más, haciendo que las páginas web sean más accesibles y atractivas para los usuarios.
+ CSS utiliza reglas para las declaraciones de estilo, ¿cómo funcionan?
+Una regla de CSS esta compuesta por un selector y de una declaracion.
+El selector indica qué elemento o grupo de elementos será estilizado, mientras que la declaracion contiene una o más declaraciones de estilo, cada una forma por una propiedad
+
+Cuales son las tres formas de dar estilo a un documento? 
+Podemos asociar las reglas de estilo de CSS a las marcas HTML de tres maneras:
+Directamente a la marca. 
+En el head de la pagina 
+Agrupar las reglas de estilo en un archivo independiente con extensión *.css
+
+Cuales son los distintos tipos de selectores más utilizados? 
+
+Los distintos tipos de selectores que podemos encontrar son: 
+Selector de tipo (Type selector): Selecciona todos los elementos HTML de un tipo específico, como p, h1, div, etc.
+p {
+  color: green;
+}
+
+
+Selector de clase (Class selector): Selecciona elementos que tienen un atributo class específico. Se utiliza el símbolo ‘.’ antes del nombre de la clase.
+.mi-clase {
+  color: blue;
+}
+
+
+Selector de ID (ID selector): Selecciona un único elemento con un atributo id. Se utiliza el símbolo # antes del nombre del ID.
+#mi-id {
+  background-color: yellow;
+}
+
+Selector de atributo (Attribute selector): Selecciona elementos que tienen un atributo específico, como [type="text"].
+input[type="text"] {
+  border: 1px solid black;
+}
+
+Selector de descendiente (Descendant selector): Selecciona elementos que son descendientes de un elemento específico.
+div p {
+  color: red;
+}
+Selector universal (Universal selector): Selecciona todos los elementos de la página, utilizando el símbolo *.
+* {
+  margin: 0;
+  padding: 0;
+}
+ ¿ Qué es una pseudo-clase? Cuáles son las más utilizadas aplicadas a vínculos?
+Una pseudo-clase es una palabra clave que se añade a un selector para especificar un estado especial de un elemento. 
+Las pseudo-clases permiten aplicar estilos cuando los elementos están en ciertos estados o cuando cumplen ciertas condiciones que no se pueden expresar con los selectores normales.
+Pseudo-clases y pseudo-elementos:
+Pseudo-clases: Seleccionan un estado específico de un elemento (:hover, :focus).
+Define un estado especial de un elemento, como cuando un usuario interactúa con él.
+
+Pseudo-elementos: Permiten seleccionar y aplicar estilos a partes de un elemento (::before, ::after).
+¿Cuáles son las pseudo-clases más utilizadas aplicadas a vínculos?
+
+:link: Selecciona enlaces que aún no han sido visitados.
+
+:visited: Selecciona enlaces que ya han sido visitados.
+
+:hover: Selecciona un enlace cuando el usuario coloca el cursor sobre él.
+
+:active: Selecciona un enlace en el momento en que está siendo clicado o activado.
+
+:focus: Selecciona un enlace cuando está enfocado (por ejemplo, usando la tecla Tab o haciendo clic sobre él).
+
+
+ ¿ Que es la herencia?
+
+La herencia en CSS es el mecanismo mediante el cual ciertos estilos aplicados a un elemento padre se propagan automáticamente a sus elementos hijos.
+ Algunas propiedades CSS, como color, font-family, y line-height, son heredables por naturaleza, lo que significa que los hijos de un elemento que tiene estas propiedades también adoptarán esos valores, a menos que se les especifique un valor diferente.
+
+
+
+ ¿ En qué consiste el proceso denominado cascada?
+
+La cascada en CSS es el proceso mediante el cual el navegador decide qué estilos aplicar a un elemento cuando múltiples reglas se refieren al mismo.
+
+Orden de aparición: Si dos reglas tienen la misma especificidad, la que aparece más tarde en el código tendrá prioridad.
+
+Especificidad: Cada selector tiene un nivel de "peso" que determina qué regla tiene prioridad. Cuanto más específico sea el selector, más peso tiene. 
+Por ejemplo: 
+Un ID (#mi-id) > que una clase (.mi-clase), y > que un selector de tipo (p).
+
+Importancia: Las reglas marcadas con !important tienen la mayor prioridad. Tiene mas peso que la orden de aparición y la especificidad.

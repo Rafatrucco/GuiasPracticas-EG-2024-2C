@@ -1,0 +1,57 @@
+Consulta a una base de datos: 
+Para comenzar la comunicación con un servidor de base de datos MySQL, es necesario abrir una conexión a ese servidor. Para inicializar esta conexión, PHP ofrece la función:
+ mysqli_connect().
+…………………………
+
+Todos sus parámetros son opcionales, pero hay tres de ellos que generalmente son necesarios:
+
+servidor (host), usuario y contraseña
+…………………………………………………………
+Una vez abierta la conexión, se debe seleccionar una base de datos para su uso, mediante la función :
+								mysqli_select_db()
+						…………………………………………………….
+
+Esta función debe pasar como parámetro: ($vLink,$vDb)
+
+	el identificador de conexión y el nombre de la base de datos.	
+………………….……………………………………………………………………………	
+
+
+						
+La función mysqli_query () se utiliza para :
+	
+ejecutar consultas SQL 
+…………………………………..
+y requiere como parámetros: 
+el identificador de conexión y la consulta SQL.
+……………….…………………………………………………………
+La cláusula or die() se utiliza para
+detener la ejecución del script si ocurre un error
+………………………….…………………………………………………..
+
+y la función mysqli_error () se puede usar para:
+obtener información detallada sobre el error.
+……….………………….. ………………………………………..
+
+Si la función mysqli_query() es exitosa, el conjunto resultante retornado se almacena en una variable, por ejemplo $vResult, y a continuación se puede ejecutar el siguiente código (explicarlo):
+
+<?php
+while ($fila = mysqli_fetch_array($vResultado))
+{
+?>
+<tr>
+<td><?php echo ($fila[0]); ?></td>
+<td><?php echo ($fila[1]); ?></td>
+<td><?php echo ($fila[2']); ?></td>
+</tr>
+<tr>
+<td colspan="5">
+<?php
+}
+mysqli_free_result($vResultado);
+mysqli_close($link);
+?>
+
+RTA: Teniendo en cuenta que la conexion fue exitosa (mysqli_query()) y que retorna un conjunto de datos a traves de una variable $vResult, lo que se visualizara luego de ejecutar el codigo será: 
+Esta linea “while ($fila = mysqli_fetch_array($vResultado))” utiliza un bucle WHILE para recorrer el conjunto de datos de $vResult. 
+La funcion mysqli_fetch_array($vResultado) recupera una fila de datos de $vResultado en cada iteracion y almacena en la variable $fila hasta que se hayan recuperado todas las filas del resultado.

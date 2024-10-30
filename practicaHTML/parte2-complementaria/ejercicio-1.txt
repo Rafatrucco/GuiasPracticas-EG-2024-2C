@@ -1,0 +1,19 @@
+1. ¿Ventajas de HTML5?
+2. ¿Por qué utilizarlo?
+3. Nombre ventajas
+
+1. HTML5 es una evolución significativa de las versiones anteriores del lenguaje de marcado HTML, diseñada para mejorar la funcionalidad, accesibilidad y la experiencia general de usuario en la web.
+
+2.HTML5 ofrece una gran cantidad de mejoras y características que no estaban disponibles en las versiones anteriores de HTML. Al usar HTML5, los desarrolladores pueden crear páginas web más dinámicas, interactivas y compatibles con múltiples plataformas y dispositivos. También mejora la accesibilidad y el SEO (optimización para motores de búsqueda) debido a su estructura semántica.
+
+Además, al eliminar la dependencia de tecnologías externas como Flash, HTML5 ayuda a simplificar el desarrollo y reduce los problemas de compatibilidad entre navegadores y dispositivos.
+
+3. Algunas ventajas que podemos nombrar son: 
+
+ Multimedia sin complementos: Etiquetas nativas para audio y video sin necesidad de Flash.
+Compatibilidad móvil: Funciona bien en smartphones y tablets.
+Estructura semántica: Mejora la accesibilidad y el SEO con nuevas etiquetas semánticas.
+Interactividad: Integración de APIs nativas para crear aplicaciones web interactivas.
+Almacenamiento local: Utiliza APIs como localStorage para guardar datos en el navegador sin cookies.
+Mejor rendimiento: Páginas más rápidas y eficientes en la carga.
+Soporte de gráficos y animaciones

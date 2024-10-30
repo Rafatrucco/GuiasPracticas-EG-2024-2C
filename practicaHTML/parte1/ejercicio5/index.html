@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document with Flexbox</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            height: 100vh;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-bottom: 2px solid black;
+        }
+        nav {
+            width: 200px;
+            background-color: #e2e2e2;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex: 1;
+            padding: 10px;
+        }
+        footer {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+       
+        }
+        .content {
+            display: flex;
+            flex-direction: row;
+            height: 100%; /* Asegura que el contenido use toda la altura disponible */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Encabezado</h1> <!-- Solo texto -->
+        <img src="images/utnRosario.jpg" alt="Logo UTN FRRO" style="height: 10vh;"> <!-- Imagen del logo -->
+    </header>
+   
+    <div class="content">
+        <nav>
+            <h2>Menú de Navegación</h2>
+            <ul>
+                <li><a href="Articulos.html" target="main">Artículos</a></li>
+                <li><a href="MasInfo.html" target="main">Más Información</a></li>
+            </ul>
+        </nav>
+
+
+        <main>
+            <h2>Página Principal</h2>
+            <p>Selecciona una opción del menú para mostrar contenido aquí.</p>
+        </main>
+    </div>
+
+
+    <footer>
+        <h2>Menú de Navegación</h2>
+        <ul>
+            <li><a href="Articulos.html" target="main">Artículos</a></li>
+            <li><a href="MasInfo.html" target="main">Más Información</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
